@@ -193,8 +193,120 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  border-bottom: 1px solid #d9ddd3;
+  border-bottom: 1px solid rgba(245, 243, 237, .28);
   padding: 1.4rem 0;
+}
+
+.experience-list {
+  border-top: 1px solid rgba(245, 243, 237, .28);
+}
+
+.product-gallery-trigger {
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.gallery-hint {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  border-radius: 999px;
+  background: rgba(245, 243, 237, .94);
+  padding: .55rem .8rem;
+  color: #17211b;
+  font: 500 .65rem 'DM Mono', monospace;
+  opacity: 0;
+  transform: translateY(.35rem);
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.product-gallery-trigger:hover .gallery-hint,
+.product-gallery-trigger:focus-visible .gallery-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-gallery-trigger:focus-visible {
+  outline: 3px solid #d6f36a;
+  outline-offset: -4px;
+}
+
+.product-gallery-dialog {
+  width: min(58rem, calc(100% - 2rem));
+  max-width: none;
+  max-height: min(88vh, 58rem);
+  overflow: auto;
+  border: 0;
+  border-radius: 1rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  background: #f5f3ed;
+  color: #17211b;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .3);
+}
+
+.product-gallery-dialog::backdrop {
+  background: rgba(23, 33, 27, .72);
+  backdrop-filter: blur(3px);
+}
+
+.gallery-dialog-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.gallery-close {
+  flex: none;
+  border: 1px solid rgba(23, 33, 27, .2);
+  border-radius: 999px;
+  padding: .55rem .85rem;
+  background: transparent;
+  font: 500 .75rem 'DM Mono', monospace;
+  transition: background .2s ease, color .2s ease;
+}
+
+.gallery-close:hover {
+  background: #17211b;
+  color: #f5f3ed;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .75rem;
+}
+
+.gallery-grid figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.gallery-grid img {
+  display: block;
+  width: 100%;
+  height: clamp(10rem, 26vw, 18rem);
+  border-radius: .6rem;
+  background: #e7ebdf;
+  object-fit: cover;
+}
+
+.gallery-grid figcaption {
+  padding-top: .55rem;
+  color: rgba(23, 33, 27, .7);
+  font: 400 .65rem/1.5 'DM Mono', monospace;
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid img {
+    height: 15rem;
+  }
 }
 
 .reveal {
