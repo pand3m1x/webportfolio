@@ -20,6 +20,40 @@ const productGalleries = {
 			['assets/rolling_through_space_sketches.jpg', 'Rolling Through Space character sketches'],
 			['assets/rolling_through_spaces_classes.jpg', 'Rolling Through Space class materials']
 		]
+	},
+	amalgamEffect: {
+		title: 'Amalgam Effect',
+		images: [
+			['assets/amalgam_effect/AE-color-updated-LOGO.png', 'Amalgam Effect logo'],
+			['assets/amalgam_effect/AE_BLM_tribute_poster.PNG', 'Black Lives Matter tribute poster'],
+			['assets/amalgam_effect/AmalgamEffectAlbum_As-we-were_FinalProduct.jpg', 'As We Were album artwork'],
+			['assets/amalgam_effect/AmalgamEffectAlbum_As-we-were_Finished.jpg', 'As We Were finished artwork'],
+			['assets/amalgam_effect/AmalgamEffectAlbum_Chimera_Finished.jpg', 'Chimera album artwork'],
+			['assets/amalgam_effect/AmalgamEffectAlbum_Chimera_Outline.jpg', 'Chimera artwork outline'],
+			['assets/amalgam_effect/AmalgamEffectAlbum_TOD_Canvas_All.jpg', 'Tales of Dystopia canvas artwork'],
+			['assets/amalgam_effect/AmalgamEffectAlbum_TOD_Canvas_FinalProduct.jpg', 'Tales of Dystopia finished canvas artwork'],
+			['assets/amalgam_effect/AmalgamEffectLogo_Ink.jpg', 'Amalgam Effect logo ink artwork'],
+			['assets/amalgam_effect/Hocus Pocus Draft 2.PNG', 'Hocus Pocus artwork draft'],
+			['assets/amalgam_effect/Hocus_Pocus_V2.png', 'Hocus Pocus finished artwork'],
+			['assets/amalgam_effect/Sketches.png', 'Amalgam Effect artwork sketches'],
+			['assets/amalgam_effect/Sketches_Album.jpg', 'Album artwork sketches']
+		]
+	},
+	dakotaSlim: {
+		title: 'Dakota Slim',
+		images: [
+			['assets/DTK/DTK You Know.PNG', 'You Know cover artwork'],
+			['assets/DTK/You Know draft.PNG', 'You Know artwork draft'],
+			['assets/DTK/You Know Draft 3.PNG', 'You Know artwork draft 3'],
+			['assets/DTK/You know Draft 2.PNG', 'You Know artwork draft 2'],
+			['assets/DTK/DTK Hooptie.JPG', 'Hooptie cover artwork'],
+			['assets/DTK/Hooptie first draft.JPG', 'Hooptie artwork first draft'],
+			['assets/DTK/Hooptie 2nd draft.JPG', 'Hooptie artwork second draft'],
+			['assets/DTK/Hooptie 3rd draft.PNG', 'Hooptie artwork third draft'],
+			['assets/DTK/DTK For the Gram.JPG', 'For the Gram artwork'],
+			['assets/DTK/DTK MP3.PNG', 'Dakota Slim MP3 artwork'],
+			['assets/DTK/Sunset DTK.JPG', 'Dakota Slim at sunset']
+		]
 	}
 };
 
