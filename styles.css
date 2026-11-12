@@ -41,15 +41,18 @@ body {
   display: flex;
   align-items: center;
   gap: .5rem;
-  font-size: .75rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
+/* .social-links {
+  padding-top: .5rem;
+} */
+
 .social-link img {
-  width: 1.75rem;
-  height: 1.75rem;
-  border-radius: .25rem;
-  object-fit: cover;
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
 }
 
 .social-link:focus-visible {
