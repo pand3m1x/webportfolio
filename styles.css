@@ -25,14 +25,37 @@ body {
 
 .nav-link,
 .contact-link,
-.card-link {
+.card-link,
+.social-link {
   transition: color .2s ease, border-color .2s ease;
 }
 
 .nav-link:hover,
 .contact-link:hover,
-.card-link:hover {
+.card-link:hover,
+.social-link:hover {
   color: #3f6048;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .75rem;
+  font-weight: 600;
+}
+
+.social-link img {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: .25rem;
+  object-fit: cover;
+}
+
+.social-link:focus-visible {
+  border-radius: .25rem;
+  outline: 2px solid #23877b;
+  outline-offset: 4px;
 }
 
 .pulse-dot {
