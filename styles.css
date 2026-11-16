@@ -319,10 +319,65 @@ body {
   object-fit: cover;
 }
 
+.gallery-image-button {
+  display: block;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.gallery-image-button:focus-visible {
+  outline: 3px solid #6c8c42;
+  outline-offset: 3px;
+}
+
 .gallery-grid figcaption {
   padding-top: .55rem;
   color: rgba(23, 33, 27, .7);
   font: 400 .65rem/1.5 'DM Mono', monospace;
+}
+
+.gallery-image-dialog {
+  position: relative;
+  width: min(96vw, 96rem);
+  max-width: none;
+  max-height: 96vh;
+  overflow: auto;
+  border: 0;
+  padding: 3.5rem 1rem 1rem;
+  background: #17211b;
+  color: #f5f3ed;
+}
+
+.gallery-image-dialog::backdrop {
+  background: rgba(0, 0, 0, .88);
+}
+
+.gallery-image-dialog img {
+  display: block;
+  width: 100%;
+  max-height: calc(96vh - 6rem);
+  object-fit: contain;
+}
+
+.gallery-image-dialog p {
+  margin: .75rem 0 0;
+  text-align: center;
+  font: 400 .7rem/1.5 'DM Mono', monospace;
+}
+
+.gallery-image-close {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  border: 1px solid rgba(245, 243, 237, .45);
+  padding: .45rem .7rem;
+  background: transparent;
+  color: inherit;
+  font: 500 .75rem 'DM Mono', monospace;
+  cursor: pointer;
 }
 
 @media (max-width: 480px) {

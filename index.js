@@ -61,6 +61,10 @@ const galleryDialog = document.querySelector('.product-gallery-dialog');
 const galleryTitle = document.getElementById('gallery-title');
 const galleryImages = document.getElementById('gallery-images');
 const galleryCloseButton = document.querySelector('.gallery-close');
+const galleryImageDialog = document.querySelector('.gallery-image-dialog');
+const galleryImage = document.getElementById('gallery-image-full-size');
+const galleryImageCaption = document.getElementById('gallery-image-caption');
+const galleryImageCloseButton = document.querySelector('.gallery-image-close');
 
 document.querySelectorAll('[data-gallery]').forEach((trigger) => {
 	trigger.addEventListener('click', () => {
@@ -70,13 +74,18 @@ document.querySelectorAll('[data-gallery]').forEach((trigger) => {
 		galleryTitle.textContent = gallery.title;
 		galleryImages.replaceChildren(...gallery.images.map(([src, alt]) => {
 			const figure = document.createElement('figure');
+			const imageButton = document.createElement('button');
 			const image = document.createElement('img');
 			const caption = document.createElement('figcaption');
 
+			imageButton.className = 'gallery-image-button';
+			imageButton.type = 'button';
+			imageButton.setAttribute('aria-label', `View ${alt} full size`);
 			image.src = src;
 			image.alt = alt;
 			caption.textContent = alt;
-			figure.append(image, caption);
+			imageButton.append(image);
+			figure.append(imageButton, caption);
 			return figure;
 		}));
 
@@ -85,6 +94,23 @@ document.querySelectorAll('[data-gallery]').forEach((trigger) => {
 });
 
 galleryCloseButton.addEventListener('click', () => galleryDialog.close());
+
+galleryImages.addEventListener('click', (event) => {
+	const imageButton = event.target.closest('.gallery-image-button');
+	if (!imageButton) return;
+
+	const image = imageButton.querySelector('img');
+	galleryImage.src = image.src;
+	galleryImage.alt = image.alt;
+	galleryImageCaption.textContent = image.alt;
+	galleryImageDialog.showModal();
+});
+
+galleryImageCloseButton.addEventListener('click', () => galleryImageDialog.close());
+
+galleryImageDialog.addEventListener('click', (event) => {
+	if (event.target === galleryImageDialog) galleryImageDialog.close();
+});
 
 galleryDialog.addEventListener('click', (event) => {
 	if (event.target === galleryDialog) galleryDialog.close();
