@@ -1,0 +1,174 @@
+/* Achievements section */
+.ach {
+  background: #143a2b;
+  color: #f6efe6;
+  padding: 5rem 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .ach { padding: 7rem 4rem; }
+}
+
+.ach-wrap {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.ach-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.ach-eyebrow {
+  margin: 0 0 .75rem;
+  color: #cfe84a;
+  font: 400 .75rem 'DM Mono', monospace;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+.ach-title {
+  margin: 0;
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -.04em;
+}
+
+.ach-lead {
+  max-width: 20rem;
+  margin: 0;
+  color: rgba(246, 239, 230, .6);
+  font-size: .875rem;
+  line-height: 1.5rem;
+}
+
+.ach-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ach-grid li {
+  width: 9rem;
+}
+
+.ach-badge {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: .6rem;
+  border: 0;
+  border-radius: .75rem;
+  padding: .5rem;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.ach-badge img {
+  width: 7.5rem;
+  height: auto;
+  transition: transform .25s ease;
+}
+
+.ach-badge:hover img,
+.ach-badge:focus-visible img {
+  transform: translateY(-6px) rotate(-3deg);
+}
+
+.ach-badge:focus-visible {
+  outline: 3px solid #cfe84a;
+  outline-offset: 2px;
+}
+
+.ach-name {
+  font: 500 .7rem/1.4 'DM Mono', monospace;
+  text-align: center;
+}
+
+.ach-locked .ach-name {
+  color: rgba(246, 239, 230, .5);
+}
+
+@media (max-width: 480px) {
+  .ach-grid li { width: 6.5rem; }
+  .ach-badge img { width: 5.5rem; }
+}
+
+/* Toast */
+.ach-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  width: min(24rem, calc(100% - 2rem));
+  border: 2px solid #cfe84a;
+  border-radius: 1rem;
+  padding: .75rem 1rem;
+  background: #0e2b20;
+  color: #f6efe6;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, .35);
+  transform: translate(-50%, 1rem);
+  opacity: 0;
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+.ach-toast.is-visible {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+.ach-toast.is-locked {
+  border-color: #c8b9aa;
+}
+
+.ach-toast img {
+  width: 3.25rem;
+  height: auto;
+  flex: none;
+}
+
+.ach-toast p {
+  margin: 0;
+}
+
+.ach-toast-label {
+  color: #cfe84a;
+  font: 500 .65rem 'DM Mono', monospace;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.ach-toast.is-locked .ach-toast-label {
+  color: #c8b9aa;
+}
+
+.ach-toast-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.ach-toast-desc {
+  color: rgba(246, 239, 230, .7);
+  font-size: .8rem;
+  line-height: 1.3;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ach-badge img,
+  .ach-toast {
+    transition: none;
+  }
+}
